@@ -40,23 +40,6 @@ Sistemde yer alan doktorlar, hastalar, randevular ve diğer tüm içerikler dina
 - 📋 **Partial View Kullanımı:** Tekrarlayan bileşenlerin yönetimi ve yeniden kullanımı.
 - 🛠️ **Entity Framework Sorguları:** ORM kullanarak veritabanı işlemlerinin yönetimi.
 
-## 📌 Kurulum
-1. **Projeyi Klonlayın:**
-   ```sh
-   git clone https://github.com/kullaniciAdi/AcunMedyaHospitalProject.git
-   ```
-2. **Bağımlılıkları Yükleyin:**
-   - Visual Studio ile projeyi açın.
-   - Gerekli NuGet paketlerini yükleyin.
-3. **Veritabanını Yapılandırın:**
-   - MSSQL üzerinde hastane yönetim sistemine uygun bir veritabanı oluşturun.
-   - `web.config` veya `appsettings.json` dosyasındaki bağlantı dizesini güncelleyin.
-4. **Projeyi Çalıştırın:**
-   - Visual Studio üzerinden `F5` tuşuna basarak projeyi çalıştırabilirsiniz.
-
-## 🎯 Katkıda Bulunma
-Her türlü katkı ve geri bildirim değerlidir! Katkıda bulunmak için **fork** yapabilir ve geliştirmelerinizi **pull request** olarak gönderebilirsiniz.
-
 ---
 🚀 **AcunMedyaHospitalProject** ile hastane yönetimini modern ve verimli bir şekilde yönetin! 🏥
 

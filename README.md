@@ -42,4 +42,5 @@ Sistemde yer alan doktorlar, hastalar, randevular ve diğer tüm içerikler dina
 
 ---
 🚀 **AcunMedyaHospitalProject** ile hastane yönetimini modern ve verimli bir şekilde yönetin! 🏥
+![image](Ekran görüntüsü 2025-03-02 031802.png)
 

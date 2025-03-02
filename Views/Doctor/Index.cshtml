@@ -1,0 +1,50 @@
+﻿﻿@model IList<AcunMedyaHospitalProject.Entities.Doctor>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Doktor tablosu</h4>
+            <p class="card-description">
+                Doktorların bilgileri bu alanda gözükecektir.
+            </p>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>İsim</th>
+                            <th>Resim</th>
+                            <th>Bölümü</th>
+                            <th>Randevular</th>
+                            <th>Güncelle</th>
+                            <th>Kaldır</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.FullName</td>
+                                <td>
+                                    <img src="@item.ImageUrl" />
+                                </td>
+                                <td>
+                                    @item.Department.Name
+                                </td>
+                                <td><a class="btn btn-info" href="/Appointment/AppointmentByDoctor/@item.Id">Randevular</a></td>
+                                <td><a class="btn btn-success" href="/Doctor/UpdateDoctor/@item.Id">Güncelle</a></td>
+                                <td><a class="btn btn-danger" href="/Doctor/DeleteDoctor/@item.Id">Kaldır</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <a class="btn btn-secondary" href="/Doctor/CreateDoctor">Doktor Ekle</a>
+            </div>
+        </div>
+    </div>
+</div>

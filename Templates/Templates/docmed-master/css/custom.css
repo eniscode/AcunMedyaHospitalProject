@@ -1,0 +1,26 @@
+﻿.wide-container {
+    max-width: 80% !important;
+    padding-left: 5px; /* Padding değerlerini azalttık */
+    padding-right: 5px; /* Padding değerlerini azalttık */
+}
+
+.wide-row {
+    margin-left: -5px; /* Margin değerlerini azalttık */
+    margin-right: -5px; /* Margin değerlerini azalttık */
+}
+
+.footer_widget {
+    margin-bottom: 10px; /* Aradaki boşluğu azaltmak için bu değeri düşürebilirsiniz */
+}
+
+.footer_address {
+    margin-bottom: 10px; /* Adres bölümünün altındaki boşluğu azaltmak için margin ekledik */
+}
+
+.footer_list li {
+    margin-bottom: 5px; /* Bölümler listesindeki öğeler arasındaki boşluğu azaltmak için margin ekledik */
+}
+
+.single-line-address {
+    white-space: nowrap;
+}

@@ -1,0 +1,49 @@
+﻿@model List<AcunMedyaHospitalProject.Entities.Department>
+<div class="our_department_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section_title text-center mb-55">
+                    <h3>Bölümlerimiz</h3>
+                    <p>
+                        Hastanemizde hizmet veren bölümlerimiz hakkında detaylı bilgi alabilirsiniz.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-xl-3 col-md-6 col-lg-3">
+                    <!-- 4 sütunlu düzenleme için col-xl-3 kullanıldı -->
+                    <div class="single_department" style="width: 100%; height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; border: 1px solid #ccc; margin: 10px 0;">
+                        <div class="department_thumb" style="flex: 1; display: flex; align-items: center; justify-content: center;">
+                            <img src="@item.ImageUrl" alt="" style="max-width: 100%; max-height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="department_content" style="flex: 1; text-align: center;">
+                            <h3><a href="#">@item.Name</a></h3>
+                            <p>@item.Description</p>
+                            <a href="#" class="learn_more" onclick="showDetails(event, '@item.ImageUrl', '@item.Name', '@item.Description')">Daha fazlası</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div id="detailsPanel" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); color: white; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000;">
+    <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
+        <div style="background-color: white; color: black; padding: 20px; border-radius: 10px; max-width: 800px; width: 100%; text-align: center;">
+            <img id="detailsImage" src="" alt="Department Image" style="width: 100%; height: auto; object-fit: cover; margin-bottom: 20px;">
+            <h3 id="detailsName"></h3>
+            <p id="detailsDescription"></p>
+            <button onclick="hideDetails()" style="background: none; border: 1px solid #ccc; padding: 10px 20px; cursor: pointer;">Kapat</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+

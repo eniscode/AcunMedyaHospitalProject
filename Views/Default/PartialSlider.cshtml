@@ -1,0 +1,39 @@
+﻿@model List<AcunMedyaHospitalProject.Entities.Slider>
+<div class="slider_area">
+    <div class="slider_active owl-carousel">
+        @foreach (var item in Model)
+        {
+            <div class="single_slider d-flex align-items-center" style="width: 80%;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-5" style="background-image:url('@item.ImageUrl'); background-size: cover; background-position: center; height: 40vh;">
+                        </div>
+                        <div class="col-xl-7 d-flex align-items-center">
+                            <div class="slider_text text-left" style="margin-top: 20px; padding-left: 40px;">
+                                <h3 style="white-space: normal;">
+                                    <span>@item.Title</span>
+                                </h3>
+                                <p style="white-space: normal;">
+                                    @item.Description
+                                </p>
+                                <a href="#services" class="boxed-btn3">Hizmetlerimize göz atın</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.boxed-btn3').forEach(button => {
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+            const servicesElement = document.getElementById('services');
+            const offset = servicesElement.getBoundingClientRect().top + window.pageYOffset - 350; // 200px yukarı kaydırma
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+        });
+    });
+</script>
+

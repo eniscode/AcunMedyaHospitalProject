@@ -1,0 +1,70 @@
+.slider_bg_1 {
+    background-image: url(../img/banner/banner.png);
+}
+
+.slider_bg_2 {
+    background-image: url(../img/banner/banner2.png);
+}
+
+.slider_area {
+    .single_slider {
+        height: 100vh; /* Tam ekran yüksekliði */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: 768px) { /* Mobil cihazlar için */
+            height: 420px;
+        }
+
+        .slider_text {
+            text-align: center;
+
+            h3 {
+                color: #00ff21;
+                font-family: $font1;
+                font-size: 70px;
+                text-transform: capitalize;
+                letter-spacing: 2px;
+                font-weight: 300;
+
+                span {
+                    font-weight: 700;
+                }
+
+                @media (max-width: 768px) { /* Mobil cihazlar için */
+                    font-size: 33px;
+                    letter-spacing: 3px;
+                }
+
+                @media (max-width: 1024px) { /* Tablet cihazlar için */
+                    font-size: 30px;
+                }
+
+                @media (max-width: 1200px) { /* Orta boyutlu cihazlar için */
+                    font-size: 35px;
+                    letter-spacing: 3px;
+                }
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                color: #727272;
+                margin-bottom: 40px;
+                margin-top: 10px;
+
+                @media (max-width: 1200px) { /* Orta boyutlu cihazlar için */
+                    font-size: 16px;
+                }
+
+                @media (max-width: 768px) { /* Mobil cihazlar için */
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

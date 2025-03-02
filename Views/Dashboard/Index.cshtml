@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row">
+    <div class="col-xl-6 col-lg-12">
+        @Html.Action("PartialStatistics")
+    </div>
+    <div class="col-xl-6 col-lg-12">
+        @Html.Action("PartialGrapich")
+    </div>
+</div>
+<div class="row">
+    @Html.Action("PartialLastAppointments")
+</div>
+

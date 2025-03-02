@@ -1,0 +1,68 @@
+﻿﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<!-- slider_area_start -->
+@Html.Action("PartialSlider", "Default")
+<!-- slider_area_end -->
+<!-- service_area_start -->
+<div id="services">
+    @Html.Action("PartialServices", "Default")
+</div>
+<!-- service_area_end -->
+<!-- service_area_end -->
+<!-- welcome_docmed_area_start -->
+<div class="welcome_docmed_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6">
+                <div class="welcome_thumb">
+                    <div class="thumb_1">
+                        <img src="https://preview.colorlib.com/theme/docmed/img/about/1.png" alt="">
+                    </div>
+                    <div class="thumb_2">
+                        <img src="https://preview.colorlib.com/theme/docmed/img/about/2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="welcome_docmed_info">
+                    <h2>Biomed'e Hoşgeldiniz</h2>
+                    <h3>
+                        Sağlığınız İçin En İyi  <br>
+                        Hizmeti Sunuyoruz
+                    </h3>
+                    <p>
+                        Misyonumuz, hastalarımıza en iyi sağlık hizmetini sunmaktır. Hastalarımızın sağlığı bizim için önemlidir.
+                    </p>
+                    <ul>
+                        <li> <i class="flaticon-right"> </i>Uzman doktor kadrosu ve modern sağlık çözümleri </li>
+                        <li> <i class="flaticon-right"></i>Hasta odaklı hizmet anlayışı </li>
+                        <li> <i class="flaticon-right"></i> Gelişmiş teknolojiyle donatılmış cihazlar</li>
+                    </ul>
+                    <a href="#" class="boxed-btn3-white-2">Daha Fazla Bilgi</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- welcome_docmed_area_end -->
+<!-- offers_area_start -->
+<div id="departments">
+    @Html.Action("PartialDepartment", "Default")
+</div>
+<!-- offers_area_end -->
+<!-- testmonial_area_start -->
+@Html.Action("PartialPatientComment", "Default")
+<!-- testmonial_area_end -->
+<!-- business_expert_area_start  -->
+<!-- business_expert_area_end  -->
+<div id="doctors">
+    @Html.Action("PartialDoctor", "Default")
+</div>
+<!-- Emergency_contact start -->
+
+@Html.Action("PartialEmergency", "Default")
+<!-- Emergency_contact end -->

@@ -1,0 +1,111 @@
+﻿@model IEnumerable<AcunMedyaHospitalProject.Entities.Department>
+
+<footer class="footer" style="background-color: #fffdd0; padding: 40px 0;">
+    <div class="footer_top" style="background-color: #ffffff">
+        <div class="container wide-container" style="background-color: #ffffff">
+            <div class="row wide-row">
+                <!-- Logo -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer_widget">
+                        <div class="footer_logo">
+                            <a href="Index">
+                                <img src="~/Templates/Templates/docmed-master/img/Adwit-Biomed-Logo.png" alt="Logo" style="max-width: 100%; height: auto;">
+                            </a>
+                        </div>
+                        <p>Sağlık ve teknolojiyi bir araya getiriyoruz.</p>
+                    </div>
+                </div>
+
+                <!-- Bölümler -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer_widget">
+                        <h3 class="footer_title" style="color: #333;">Bölümlerimiz</h3> <!-- Yazı rengi koyu yapıldı -->
+                        <table class="table table-striped">
+                            <tbody>
+                                @foreach (var department in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            <img src="@department.ImageUrl" alt="@department.Name" style="width: 30px; height: 30px; object-fit: cover; margin-right: 10px;"> <!-- Küçük resim eklendi -->
+                                        </td>
+                                        <td>
+                                            <a href="#departments" style="color: #333;">@department.Name</a> <!-- Yazı rengi koyu yapıldı ve bağlantı eklendi -->
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Adres Bilgileri -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer_widget">
+                        <h3 class="footer_title">Adres</h3>
+                        <p class="footer_address single-line-address">
+                            <i class="fa fa-map-marker"></i> Pendik/İstanbul<br>
+                            <i class="fa fa-phone"></i> 0216 121 818<br>
+                            <i class="fa fa-envelope"></i> biomed@contact.com
+                        </p>
+                        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1VnPkRxmP-cOp2Mgqk1pZP27miDY9v5o&ehbc=2E312F"
+                                width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                        <div class="social_media mt-3">
+                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                <a href="https://www.facebook.com" target="_blank" style="margin-right: 10px;">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <span>Facebook</span>
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                <a href="https://www.twitter.com" target="_blank" style="margin-right: 10px;">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <span>Twitter</span>
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                <a href="https://www.instagram.com" target="_blank" style="margin-right: 10px;">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                                <span>Instagram</span>
+                            </div>
+                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                <a href="https://www.linkedin.com" target="_blank" style="margin-right: 10px;">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                                <span>LinkedIn</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Alanı -->
+    <div class="copy-right_text" style="background-color: #e9ecef; padding: 20px 0;">
+        <div class="container wide-container">
+            <div class="footer_border"></div>
+            <div class="row wide-row">
+                <div class="col-12">
+                    <p class="copy_right text-center">
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script>
+                        All rights reserved | This template is made with
+                        <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                        <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+

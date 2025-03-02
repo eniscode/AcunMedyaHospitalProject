@@ -1,0 +1,51 @@
+﻿﻿@model IList<AcunMedyaHospitalProject.Entities.Department>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Bölüm tablosu</h4>
+            <p class="card-description">
+                Bölüm bilgileri bu alanda gözükecektir.
+            </p>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>İsim</th>
+                            <th>Resim</th>
+                            <th>Açıklama</th>
+                            <th>Bölümün Doktorları</th>
+                            <th>Güncelle</th>
+                            <th>Kaldır</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr style="height: 100px;">
+                                <!-- Satır yüksekliği ayarlandı -->
+                                <td>@item.Id</td>
+                                <td>@item.Name</td>
+                                <td>
+                                    <img src="@item.ImageUrl" style="width: 100px; height: 100px; object-fit: cover;" /> <!-- Resim boyutu ayarlandı -->
+                                </td>
+                                <td>
+                                    @item.Description
+                                </td>
+                                <td><a class="btn btn-primary" href="/Doctor/DoctorByDepartment/@item.Id">Doktorlar</a></td>
+                                <td><a class="btn btn-success" href="/Department/UpdateDepartment/@item.Id">Güncelle</a></td>
+                                <td><a class="btn btn-danger" href="/Department/DeleteDepartment/@item.Id">Kaldır</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <a class="btn btn-secondary" href="/Department/CreateDepartment">Bölüm Ekle</a>
+            </div>
+        </div>
+    </div>
+</div>
